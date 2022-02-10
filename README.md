@@ -6,9 +6,13 @@ This tool can be easily used with files:
 `aec_cmdline < infile.raw > outfile.raw`
 
 Input sample:
+
 [infile_s16_le_r16000_c2.raw.zip](https://github.com/Arkq/bluez-alsa/files/8037121/infile_s16_le_r16000_c2.raw.zip)
+
 Resulting sample:
+
 [outfile_s16_le_r16000_c1.raw.zip](https://github.com/Arkq/bluez-alsa/files/8037159/outfile_s16_le_r16000_c1.raw.zip)
+
 (sorry for some clipping samples)
 
 or in combination with bluez-alsa arecord and aplay:
