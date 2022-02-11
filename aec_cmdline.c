@@ -22,7 +22,7 @@
 #define MONO_FRAME_SIZE 256
 #define STEREO_FRAME_SIZE ( MONO_FRAME_SIZE * 2 )
 #define FILTER_SIZE 1024
-#define SAMPLE_RATE 16000
+#define SAMPLE_RATE 8000
 
 int main(int argc, char **argv) {
 
