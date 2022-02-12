@@ -18,7 +18,9 @@ The kernel module snd-aloop is required and can be loaded by:
 
 This tool can be easily used with files:
 
-```aec_cmdline < infile.raw > outfile.raw```
+```
+aec_cmdline < infile.raw > outfile.raw
+```
 
 Input sample:
 
