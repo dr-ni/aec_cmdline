@@ -65,9 +65,9 @@ Uninstall:
 sudo make uninstall
 ```
 
-## FILES
+## Configuration
 
-The alsa-loopback configuration file 50-aec.conf is stored in /etc/alsa/conf.d/
+The alsa-loopback configuration file is installed at /etc/alsa/conf.d/50-aec.conf
 
 ----
 
