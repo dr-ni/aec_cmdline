@@ -7,11 +7,13 @@ This tool handles incomming and outgoing audio and can be easily used with files
 stereo track, holding the local recording on the left and the parasitic echo-reference signal on the right.
 The required raw stereo input-track is being supplied from a loopback device as described in:
 
-`https://github.com/SaneBow/alsa-aec.git`
+https://github.com/SaneBow/alsa-aec.git
 
 The kernel module snd-aloop is required and can be loaded by:
 
-`sudo modprobe snd-aloop`
+```
+sudo modprobe snd-aloop
+```
 
 
 ## Usage
