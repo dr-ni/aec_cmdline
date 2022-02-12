@@ -1,0 +1,52 @@
+.TH "aec_cmdline" 1 0.0.1 "12 Feb 2022" "User Manual"
+
+.SH NAME
+aec_cmdline
+
+.SH DESCRIPTION
+A simple aec (acoustic echo-cancelling) commandline tool based on speexdsp.
+
+This tool handles incomming and outgoing audio and can be easily used with files or pipes. The tool is reading a stereo track, holding the local recording on the left and the parasitic echo-reference signal on the right. The required stereo input-track is being supplied from a loopback device as described in https://github.com/SaneBow/alsa-aec.git.
+
+The kernel module snd-aloop is required and can be loaded by:
+    sudo modprobe snd-aloop
+
+.SH SYNOPSIS
+Usage with raw audio files S16_LE 8 kHz:
+    aec_cmdline < stereo_infile.raw > mono_outfile.raw
+
+Usage with pipes e.g. aec with bluez-alsa arecord and aplay:
+    arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000
+    arecord -D aec_internal -f S16_LE -c 2 -r 8000 | aec_cmdline | aplay -D bluealsa -f S16_LE -c 1 -r 8000
+
+.SH FILES
+.TP
+The alsa-loopback configuration 50-aec.conf is stored in /etc/alsa/conf.d/
+
+.SH COPYRIGHT
+
+MIT License
+
+Copyright (c) 2022 dr-ni
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+.SH CONTACT
+ Website: https://github.com/dr-ni/aec_cmdline
+
