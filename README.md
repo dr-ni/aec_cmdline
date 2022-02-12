@@ -5,9 +5,7 @@ A simple aec (acoustic echo-cancelling) commandline tool based on speexdsp.
 
 This tool handles incomming and outgoing audio and can be easily used with files or pipes. The tool is reading a
 stereo track, holding the local recording on the left and the parasitic echo-reference signal on the right.
-The required raw stereo input-track is being supplied from a loopback device as described in:
-
-https://github.com/SaneBow/alsa-aec.git
+The required raw stereo input-track is being supplied from a loopback device as described in https://github.com/SaneBow/alsa-aec.git
 
 The kernel module snd-aloop is required and can be loaded by:
 
