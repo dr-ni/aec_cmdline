@@ -18,7 +18,7 @@ The kernel module snd-aloop is required and can be loaded by:
 
 This tool can be easily used with files:
 
-`aec_cmdline < infile.raw > outfile.raw`
+```aec_cmdline < infile.raw > outfile.raw```
 
 Input sample:
 
@@ -32,11 +32,15 @@ Resulting sample:
 
 or in combination with bluez-alsa arecord and aplay:
 
-`arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000`
+```
+arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000
+```
 
 and
 
-`arecord -D aec_internal -f S16_LE -c 2 -r 8000 | aec_cmdline | aplay -D bluealsa -f S16_LE -c 1 -r 8000`
+```
+arecord -D aec_internal -f S16_LE -c 2 -r 8000 | aec_cmdline | aplay -D bluealsa -f S16_LE -c 1 -r 8000
+```
 
 
 ## Development
