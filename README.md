@@ -3,8 +3,8 @@ A simple `AEC` (acoustic echo-cancelling) command-line tool based on speexdsp.
 
 ## Description
 
-This tool is removing unwanted acoustic loudspeaker-echo from microfone-recordings. It handles the incomming and outgoing audio-streams directly over stdin/stdout - either from raw audio-files or over pipes. The tool is reading a raw stereo 8 kHz S16_LE input-track, holding the microphone-recording on the left and the unwanted echo signal (the loudspeaker reference-playback) on the right. This stereo-track is supplied from a virtual alsa loopback-device, as described in https://github.com/SaneBow/alsa-aec.git.
-The processed raw mono 8 kHz S16_LE audio-output is then finally sent to stdout.
+This tool is removing unwanted acoustic loudspeaker-echo from microfone-recordings. It handles the incomming and outgoing audio-streams directly over stdin/stdout - either from raw audio-files or over pipes. The tool is reading a raw stereo `8kHz S16_LE` input-track, holding the microphone-recording on the left and the unwanted echo signal (the loudspeaker reference-playback) on the right. This stereo-track is supplied from a virtual alsa loopback-device, as described in https://github.com/SaneBow/alsa-aec.git.
+The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout.
 
 ## Requirements
 
@@ -19,7 +19,7 @@ sudo modprobe snd-aloop
 
 ## Usage
 
-This tool can be used with files:
+Use with files:
 
 ```
 aec_cmdline < infile.raw > outfile.raw
@@ -33,7 +33,7 @@ Resulting sample:
 
 [outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056477/outfile_s16_le_r8000_c1.raw.zip)
 
-or in combination with bluez-alsa arecord and aplay:
+Use in combination with bluez-alsa arecord and aplay:
 
 ```
 arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000
