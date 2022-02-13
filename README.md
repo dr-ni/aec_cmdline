@@ -27,13 +27,11 @@ aec_cmdline < infile.raw > outfile.raw
 
 Input sample:
 
-[infile_s16_le_r16000_c2.raw.zip](https://github.com/Arkq/bluez-alsa/files/8037121/infile_s16_le_r16000_c2.raw.zip)
+[infile_s16_le_r8000_c2.raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056481/infile_s16_le_r8000_c2.raw.zip)
 
 Resulting sample:
 
-[outfile_s16_le_r16000_c1.raw.zip](https://github.com/Arkq/bluez-alsa/files/8037159/outfile_s16_le_r16000_c1.raw.zip)
-
-(sorry for some clipping samples)
+[outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056477/outfile_s16_le_r8000_c1.raw.zip)
 
 or in combination with bluez-alsa arecord and aplay:
 
