@@ -33,8 +33,6 @@ Result: [outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/
 arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000
 ```
 
-and
-
 ```
 arecord -D aec_internal -f S16_LE -c 2 -r 8000 | aec_cmdline | aplay -D bluealsa -f S16_LE -c 1 -r 8000
 ```
