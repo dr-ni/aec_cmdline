@@ -16,6 +16,10 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 sudo modprobe snd-aloop
 ```
 
+- Configuration loopback device
+
+The alsa-loopback configuration file (for 8 kHz sampling rate `AEC`) is installed at /etc/alsa/conf.d/50-aec.conf.
+It should be modified to fit to your local audio setup. It was initially forked from https://github.com/SaneBow/alsa-aec.
 
 ## Usage
 
@@ -62,11 +66,6 @@ Uninstall:
 ```sh
 sudo make uninstall
 ```
-
-## Configuration loopback device
-
-The alsa-loopback configuration file (for 8 kHz sampling rate `AEC`) is installed at /etc/alsa/conf.d/50-aec.conf.
-It should be modified to fit to your local audio setup. It was initially forked from https://github.com/SaneBow/alsa-aec.
 
 ----
 
