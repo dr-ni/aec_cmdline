@@ -1,5 +1,5 @@
 # aec_cmdline
-A simple `AEC` (acoustic echo-cancelling) command-line tool based on speexdsp.
+A simple acoustic echo-cancelling command-line tool based on speexdsp.
 
 ## Description
 
@@ -16,7 +16,7 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 
 ## Usage
 
-Use with files:
+### with files:
 
 ```
 aec_cmdline < infile.raw > outfile.raw
@@ -30,7 +30,8 @@ Resulting sample:
 
 [outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056477/outfile_s16_le_r8000_c1.raw.zip)
 
-Use in combination with bluez-alsa arecord and aplay:
+
+### with bluez-alsa arecord and aplay:
 
 ```
 arecord -f S16_LE -D bluealsa | aplay -D mono_mloopplay -f S16_LE -r 8000
