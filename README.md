@@ -12,7 +12,7 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 
 - The kernel module snd-aloop is required and can be loaded from command-line: ```sudo modprobe snd-aloop```
 
-- The alsa-loopback configuration file (initially forked from https://github.com/SaneBow/alsa-aec and modified for 8kHz sampling rate) is installed at /etc/alsa/conf.d/50-aec.conf. It should be changed to fit to your local audio setup.
+- The alsa-loopback configuration file (initially forked from https://github.com/SaneBow/alsa-aec and modified for 8kHz sampling rate) is installed at `/etc/alsa/conf.d/50-aec.conf`. It should be changed to fit to your local audio setup.
 
 ## Usage
 
