@@ -8,10 +8,13 @@ A simple acoustic echo-cancelling commandline tool based on speexdsp.
 
 This tool is removing unwanted acoustic loudspeaker-echo from microfone-recordings. It handles the incomming and outgoing audio-streams directly over stdin/stdout - either from raw audio-files or over pipes. The tool is reading a raw stereo 8kHz S16_LE input-track, holding the microphone-recording on the left and the unwanted echo signal (the loudspeaker reference-playback) on the right. This stereo-track is supplied from a virtual alsa loopback-device. The processed raw mono 8kHz S16_LE audio-output is then finally sent to stdout.
 
+.SH REQUIREMENTS
 
+The speexdsp-dev package must be installed.
 
-The kernel module snd-aloop is required and can be loaded by:
-    sudo modprobe snd-aloop
+The kernel module snd-aloop is required: sudo modprobe snd-aloop.
+
+The loopback configuration /etc/alsa/conf.d/50-aec.conf should be adapted to your local audio setup.
 
 .SH SYNOPSIS
 Usage with raw audio files S16_LE 8 kHz:
