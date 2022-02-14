@@ -3,7 +3,8 @@ A simple `AEC` (acoustic echo-cancelling) command-line tool based on speexdsp.
 
 ## Description
 
-This tool is removing unwanted acoustic loudspeaker-echo from microfone-recordings. It handles the incomming and outgoing audio-streams directly over stdin/stdout - either from raw audio-files or over pipes. The tool is reading a raw stereo `8kHz S16_LE` input-track, holding the microphone-recording on the left and the unwanted echo signal (the loudspeaker reference-playback) on the right. This stereo-track is supplied from a virtual alsa loopback-device, as described in https://github.com/SaneBow/alsa-aec.git.
+This tool is removing unwanted acoustic loudspeaker-echo from microfone-recordings. It handles the incomming and outgoing audio-streams directly over stdin/stdout - either from raw audio-files or over pipes. The tool is reading a raw stereo `8kHz S16_LE` input-track, holding the microphone-recording on the left and the unwanted echo signal (the loudspeaker reference-playback) on the right. This stereo-track is supplied from a virtual alsa loopback-device, as described in 
+.https://github.com/SaneBow/alsa-aec/blob/main/images/workflow.png
 The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout.
 
 ## Requirements
