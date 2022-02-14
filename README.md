@@ -10,7 +10,7 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 
 - The speexdsp-dev package must be installed with your package manager or by building and installing from source, e.g. from https://github.com/xiph/speexdsp.git.
 
-- The kernel module snd-aloop is required and can be loaded by following command: ```sudo modprobe snd-aloop```
+- The kernel module snd-aloop is required and can be loaded from command-line: ```sudo modprobe snd-aloop```
 
 - The alsa-loopback configuration file (initially forked from https://github.com/SaneBow/alsa-aec and modified for 8kHz sampling rate) is installed at /etc/alsa/conf.d/50-aec.conf. It should be changed to fit to your local audio setup.
 
