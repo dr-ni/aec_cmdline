@@ -22,13 +22,11 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 aec_cmdline < infile.raw > outfile.raw
 ```
 
-Input sample:
+### Example
 
-[infile_s16_le_r8000_c2.raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056481/infile_s16_le_r8000_c2.raw.zip)
+Input: [infile_s16_le_r8000_c2.raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056481/infile_s16_le_r8000_c2.raw.zip)
 
-Resulting sample:
-
-[outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056477/outfile_s16_le_r8000_c1.raw.zip)
+Result: [outfile_s16_le_r8000_c1 .raw.zip](https://github.com/dr-ni/aec_cmdline/files/8056477/outfile_s16_le_r8000_c1.raw.zip)
 
 
 ### with bluez-alsa arecord and aplay:
