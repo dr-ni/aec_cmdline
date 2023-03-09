@@ -1,6 +1,6 @@
 /*
  * aec_cmdline.c
- * A straight forward AEC proove of concept based on speexdsp
+ * A straight forward AEC commandline tool based on speexdsp
  * MIT License Copyright (c) 2022 U. Niethammer
  * compile: gcc aec_cmdline.c -lspeexdsp -o aec_cmdline
  * performs best with newest https://github.com/xiph/speexdsp.git
