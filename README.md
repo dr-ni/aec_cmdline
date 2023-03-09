@@ -8,7 +8,7 @@ The processed raw mono `8kHz S16_LE` audio-output is then finally sent to stdout
 
 ## Requirements
 
-- The libspeexdsp-dev package must be installed with your package manager or by building and installing from source, e.g. from https://github.com/xiph/speexdsp.git.
+- The libspeexdsp-dev package must be installed by using your package manager or by building and installing from source, e.g. from https://github.com/xiph/speexdsp.git.
 
 - The kernel module snd-aloop is required and can be loaded from command-line: ```sudo modprobe snd-aloop```
 
