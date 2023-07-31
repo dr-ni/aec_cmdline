@@ -19,7 +19,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-#define MONO_FRAME_SIZE 256
+#define MONO_FRAME_SIZE 80
 #define STEREO_FRAME_SIZE ( MONO_FRAME_SIZE * 2 )
 #define FILTER_SIZE 1024
 #define SAMPLE_RATE 8000
